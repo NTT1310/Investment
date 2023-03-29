@@ -6,9 +6,9 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 
 ## function
-def get_year_list(n, start_date):
+def get_year_list(n, start_year):
     year_list = []
-    year = start_date.year
+    year = start_year
 
     if n <= 0:
         return year_list
@@ -44,7 +44,7 @@ df = pd.read_csv(file_dir)
 n_year = 10
 start_date = datetime.now()
 start_year = start_date.year
-list_year = get_year_list(n_year, start_date)
+list_year = get_year_list(n_year, start_year)
 
 ## Execution
 df1 = {
